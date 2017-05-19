@@ -143,7 +143,6 @@ context 'Resque::Scheduler' do
     assert_equal(1, Resque::Scheduler.rufus_scheduler.jobs.size)
     assert_equal(1, Resque::Scheduler.scheduled_jobs.size)
     assert Resque::Scheduler.scheduled_jobs.keys.include?('some_ivar_job')
-    job = Resque::Scheduler.scheduled_jobs['some_ivar_job']
   end
 
   test 'load_schedule_job with cron with options' do
